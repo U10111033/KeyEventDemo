@@ -6,7 +6,7 @@ import javax.swing.*;
 import java.util.*;
 
 public class KeyEventDemo extends JFrame {
-	private KeyboardPanel keyboardPanel = new KeyboardPanel();
+	private MessagePane keyboardPanel = new MessagePane();
 	
 	/** Initialize UI */
 	public KeyEventDemo() {
@@ -27,14 +27,14 @@ public class KeyEventDemo extends JFrame {
 		frame.setVisible(true);
 	}
 
-	// Inner class: KeyboardPanel for receiving key input
-	static class KeyboardPanel extends JPanel {
+	// Inner class: MessagePane for receiving key input
+	static class MessagePane extends JPanel {
 		private int x = 10;
 		private int y = 35;
 		private char keyChar = 'A'; // Default key
 		private StringBuffer buf = new StringBuffer();
 
-		public KeyboardPanel() {
+		public MessagePane() {
 			addKeyListener(new KeyAdapter() {
 				@Override
 				public void keyPressed(KeyEvent e){
